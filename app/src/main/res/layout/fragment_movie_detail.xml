@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.detail.MovieDetailFragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationContentDescription="@string/back_button"
+        app:navigationIcon="@drawable/back_arrow">
+
+        <TextView
+            android:id="@+id/movieHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:fontFamily="@font/poppins_bold"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            tools:text="Title" />
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <ImageView
+        android:id="@+id/movieImage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/movie_image"
+        android:maxHeight="440dp"
+        android:minHeight="240dp"
+        android:scaleType="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        tools:src="@tools:sample/backgrounds/scenic" />
+
+    <TextView
+        android:id="@+id/movieName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center_vertical"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/startGuideline"
+        app:layout_constraintTop_toBottomOf="@id/movieImage"
+        tools:text="The Little Mermaid and The Big Mermaid" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/movieReleaseDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:drawableStart="@drawable/ic_calendar"
+        android:drawablePadding="6dp"
+        app:layout_constraintEnd_toStartOf="@id/endGuideline"
+        app:layout_constraintStart_toStartOf="@id/startGuideline"
+        app:layout_constraintTop_toBottomOf="@id/movieName"
+        tools:text="Release Date: 2022" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/movieLanguage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:drawableStart="@drawable/ic_language"
+        android:drawablePadding="6dp"
+        app:layout_constraintEnd_toStartOf="@id/endGuideline"
+        app:layout_constraintStart_toStartOf="@id/startGuideline"
+        app:layout_constraintTop_toBottomOf="@id/movieReleaseDate"
+        tools:text="Language: EN" />
+
+    <com.skydoves.progressview.ProgressView
+        android:id="@+id/progressBar"
+        android:layout_width="0dp"
+        android:layout_height="14dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toStartOf="@id/endGuideline"
+        app:layout_constraintStart_toStartOf="@id/startGuideline"
+        app:layout_constraintTop_toBottomOf="@id/movieLanguage"
+        app:progressView_animation="accelerateDecelerate"
+        app:progressView_autoAnimate="true"
+        app:progressView_colorBackground="@color/grey_200"
+        app:progressView_colorProgress="@color/orange"
+        app:progressView_labelTypeface="bold"
+        app:progressView_labelSize="12sp"
+        app:progressView_max="10"
+        app:progressView_min="0"
+        app:progressView_radius="8dp" />
+
+    <TextView
+        android:id="@+id/movieOverview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/poppins"
+        android:textSize="16sp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/endGuideline"
+        app:layout_constraintStart_toStartOf="@id/startGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/startGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="8dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="8dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
