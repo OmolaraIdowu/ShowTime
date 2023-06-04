@@ -19,10 +19,6 @@ A simple android app that follows the MVVM (Model-View-ViewModel) architectural 
  - Add the following line to the file: **API_KEY=YOUR_API_KEY**, replacing **YOUR_API_KEY** with your actual API key.
  - Make sure to sync the project in Android Studio after adding the API key to local.properties and run on an android device or emulator.
 
-## APK file
-
-You can download the APK file for this project [here](https://github.com/OmolaraIdowu/ShowTime/blob/master/app/release/Show-Time.apk)
-
 ## Architecture 
 This app follows the MVVM (Model-View-ViewModel) architectural pattern, which separates the responsibilities of the UI, data, and business logic. Here's a brief overview of the different components:
 
