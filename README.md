@@ -40,10 +40,9 @@ This app follows the MVVM (Model-View-ViewModel) architectural pattern, which se
 
 ## Screenshots
 <ul>
-  <img src="https://github.com/segunfrancis/Cool-Movies/blob/master/screenshots/Screenshot_20201205-052719_Cool%20Movies.jpg" width="40%" alt="Screen1" hspace="15">
-  <img src="https://github.com/segunfrancis/Cool-Movies/blob/master/screenshots/Screenshot_20201205-052900_Cool%20Movies.jpg" width="40%" alt="Screen2" hspace="15">
-  <img src="https://github.com/segunfrancis/Cool-Movies/blob/master/screenshots/Screenshot_20201205-062446_Cool%20Movies.jpg" width="40%" alt="Screen3" hspace="15">
-  <img src="https://github.com/segunfrancis/Cool-Movies/blob/master/screenshots/Screenshot_20201205-062532_Cool%20Movies.jpg" width="40%" alt="Screen4" hspace="15">
-  <img src="https://github.com/segunfrancis/Cool-Movies/blob/master/screenshots/Screenshot_20201205-062545_Cool%20Movies.jpg" width="40%" alt="Screen4" hspace="15">
+  <img src="https://github.com/OmolaraIdowu/ShowTime/blob/master/screenshots/ShowTime_1.png" width="40%" alt="Screen1" hspace="15">
+  <img src="https://github.com/OmolaraIdowu/ShowTime/blob/master/screenshots/ShowTime_2.png" width="40%" alt="Screen2" hspace="15">
+  <img src="https://github.com/OmolaraIdowu/ShowTime/blob/master/screenshots/ShowTime_3.png" width="40%" alt="Screen3" hspace="15">
+  <img src="https://github.com/OmolaraIdowu/ShowTime/blob/master/screenshots/ShowTime_4.png" width="40%" alt="Screen4" hspace="15">
 </ul>
 
