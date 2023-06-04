@@ -16,8 +16,12 @@ A simple android app that follows the MVVM (Model-View-ViewModel) architectural 
  - Import into android studio
  - Get your API key from [here](https://www.themoviedb.org/) The Movie Database (TMDb) website.
  - Open the **local.properties** file in the root directory of the project.
- - Add the following line to the file: API_KEY=YOUR_API_KEY, replacing YOUR_API_KEY with your actual API key.
+ - Add the following line to the file: **API_KEY=YOUR_API_KEY**, replacing **YOUR_API_KEY** with your actual API key.
  - Make sure to sync the project in Android Studio after adding the API key to local.properties and run on an android device or emulator.
+
+## APK file
+
+You can download the APK file for this project [here](https://github.com/OmolaraIdowu/ShowTime/blob/master/app/release/Show-Time.apk)
 
 ## Architecture 
 This app follows the MVVM (Model-View-ViewModel) architectural pattern, which separates the responsibilities of the UI, data, and business logic. Here's a brief overview of the different components:
@@ -32,6 +36,7 @@ This app follows the MVVM (Model-View-ViewModel) architectural pattern, which se
  * [LiveData](https://developer.android.com/topic/libraries/architecture/livedata)
  * [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel)
  * [Retrofit](https://square.github.io/retrofit/) and [OkHttp](https://square.github.io/okhttp/) - For handling API requests and networking.
+ * **GSON** to parse API response.
  * [Android Material Design Components](https://material.io/develop/android/docs/getting-started)
  * [Kotlin Coroutines](https://developer.android.com/kotlin/coroutines) - Concurrency design pattern used on Android to simplify code that executes asynchronously.
  * [Glide](https://bumptech.github.io/glide/) - For loading and displaying movie poster images.
@@ -40,9 +45,14 @@ This app follows the MVVM (Model-View-ViewModel) architectural pattern, which se
 
 ## Screenshots
 <ul>
-  <img src="https://github.com/OmolaraIdowu/ShowTime/blob/master/screenshots/ShowTime_1.png" width="40%" alt="Screen1" hspace="15">
-  <img src="https://github.com/OmolaraIdowu/ShowTime/blob/master/screenshots/ShowTime_2.png" width="40%" alt="Screen2" hspace="15">
-  <img src="https://github.com/OmolaraIdowu/ShowTime/blob/master/screenshots/ShowTime_3.png" width="40%" alt="Screen3" hspace="15">
-  <img src="https://github.com/OmolaraIdowu/ShowTime/blob/master/screenshots/ShowTime_4.png" width="40%" alt="Screen4" hspace="15">
+  <img src="https://github.com/OmolaraIdowu/ShowTime/blob/master/screenshots/ShowTime_1.png"width="300" height="600" alt="Screen 1">
+  <img src="https://github.com/OmolaraIdowu/ShowTime/blob/master/screenshots/ShowTime_2.png" width="300" height="600" alt="Screen 2">
+  <img src="https://github.com/OmolaraIdowu/ShowTime/blob/master/screenshots/ShowTime_3.png" width="300" height="600" alt="Screen 3">
+  <img src="https://github.com/OmolaraIdowu/ShowTime/blob/master/screenshots/ShowTime_4.png" width="300" height="600" alt="Screen 4">
 </ul>
+
+## Author
+
+* **OmolaraIdowu**  
+ - [LinkedIn](https://www.linkedin.com/in/omolara-idowu-0273661b4/)
 
