@@ -19,6 +19,10 @@ A simple android app that follows the MVVM (Model-View-ViewModel) architectural 
  - Add the following line to the file: **API_KEY=YOUR_API_KEY**, replacing **YOUR_API_KEY** with your actual API key.
  - Make sure to sync the project in Android Studio after adding the API key to local.properties and run on an android device or emulator.
 
+## APK file
+
+You can download the APK file for this project [here](https://github.com/OmolaraIdowu/ShowTime/blob/master/app/release/Show-Time.apk)
+
 ## Architecture 
 This app follows the MVVM (Model-View-ViewModel) architectural pattern, which separates the responsibilities of the UI, data, and business logic. Here's a brief overview of the different components:
 
@@ -40,12 +44,9 @@ This app follows the MVVM (Model-View-ViewModel) architectural pattern, which se
  * [ProgressView](https://github.com/skydoves/ProgressView) - A polished and flexible ProgressView, fully customizable with animations.
 
 ## Screenshots
-<ul>
-  <img src="https://github.com/OmolaraIdowu/ShowTime/blob/master/screenshots/ShowTime_1.png"width="300" height="600" alt="Screen 1">
-  <img src="https://github.com/OmolaraIdowu/ShowTime/blob/master/screenshots/ShowTime_2.png" width="300" height="600" alt="Screen 2">
-  <img src="https://github.com/OmolaraIdowu/ShowTime/blob/master/screenshots/ShowTime_3.png" width="300" height="600" alt="Screen 3">
-  <img src="https://github.com/OmolaraIdowu/ShowTime/blob/master/screenshots/ShowTime_4.png" width="300" height="600" alt="Screen 4">
-</ul>
+HOME | DETAILS | SEARCH |
+| :---------------: | :---------------: | :---------------: |
+| <img src="https://github.com/OmolaraIdowu/ShowTime/blob/master/screenshots/Screenshot_1.png" align="center" width="100%" alt="Screen 1"> | <img src="https://github.com/OmolaraIdowu/ShowTime/blob/master/screenshots/Screenshot_2.png" align="center" width="100%" alt="Screen 2"> | <img src="https://github.com/OmolaraIdowu/ShowTime/blob/master/screenshots/Screenshot_3.png" align="center" width="100%" alt="Screen 3">
 
 ## Author
 
