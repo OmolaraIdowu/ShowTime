@@ -4,63 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.MovieListFragment">
+    tools:context=".ui.home.HomeFragment">
 
     <TextView
         android:id="@+id/appName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/syne_bold"
         android:text="@string/show_time"
         android:textColor="@color/black"
         android:textSize="24sp"
-        app:layout_constraintEnd_toStartOf="@id/endGuideline"
+        app:layout_constraintEnd_toStartOf="@id/searchButton"
         app:layout_constraintStart_toStartOf="@id/startGuideline"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <SearchView
-        android:id="@+id/movieSearchView"
-        android:layout_width="0sp"
+    <ImageButton
+        android:id="@+id/searchButton"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/background"
-        android:focusable="false"
-        android:queryHint="Search"
-        app:layout_constraintTop_toBottomOf="@id/appName"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/text_search"
+        android:padding="8dp"
+        android:src="@drawable/ic_search"
         app:layout_constraintEnd_toStartOf="@id/endGuideline"
-        app:layout_constraintStart_toStartOf="@id/startGuideline"
-        android:iconifiedByDefault="false"
-        android:queryBackground="@android:color/transparent" />
-
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/noResultImageView"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:scaleType="centerCrop"
-        android:scaleX="-1"
-        android:src="@drawable/ic_no_result"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/appName"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/noResultTextView"
-        android:layout_width="240dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
-        android:fontFamily="@font/poppins"
-        android:text="@string/no_result"
-        android:textColor="@color/grey"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="@id/noResultImageView"
-        app:layout_constraintStart_toStartOf="@id/noResultImageView"
-        app:layout_constraintTop_toBottomOf="@id/noResultImageView" />
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipeRefreshLayout"
@@ -70,14 +40,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/endGuideline"
         app:layout_constraintStart_toStartOf="@id/startGuideline"
-        app:layout_constraintTop_toBottomOf="@id/movieSearchView">
+        app:layout_constraintTop_toBottomOf="@id/appName">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/movieListRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scrollbars="vertical"
-            tools:listitem="@layout/movie_list_item" />
+            tools:listitem="@layout/home_list_item" />
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     <ProgressBar
@@ -89,16 +59,16 @@
         android:indeterminate="true"
         android:indeterminateTint="@color/orange"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/endGuideline"
-        app:layout_constraintStart_toStartOf="@id/startGuideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
-    android:id="@+id/startGuideline"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    app:layout_constraintGuide_begin="8dp" />
+        android:id="@+id/startGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="8dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/endGuideline"

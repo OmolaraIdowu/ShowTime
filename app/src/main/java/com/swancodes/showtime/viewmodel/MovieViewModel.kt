@@ -4,6 +4,8 @@ import androidx.lifecycle.*
 import com.swancodes.showtime.data.api.MovieApiService
 import com.swancodes.showtime.data.model.Movie
 import kotlinx.coroutines.launch
+import retrofit2.HttpException
+import java.io.IOException
 
 enum class MovieApiStatus { LOADING, ERROR, DONE }
 
@@ -17,6 +19,10 @@ class MovieViewModel(private val api: MovieApiService) : ViewModel() {
     private val _searchResult = MutableLiveData<List<Movie>>()
     val searchResult: LiveData<List<Movie>> = _searchResult
 
+    private val _errorMessage = MutableLiveData<String>()
+    val errorMessage: LiveData<String> = _errorMessage
+
+
     init {
         getPopularMovies()
     }
@@ -27,9 +33,14 @@ class MovieViewModel(private val api: MovieApiService) : ViewModel() {
             try {
                 _movies.value = api.getPopularMovies().results
                 _status.value = MovieApiStatus.DONE
+            } catch (e: IOException) {
+                _status.value = MovieApiStatus.ERROR
+                _movies.value = listOf()
+                _errorMessage.value = "Network Failure: ${e.message}"
             } catch (e: Exception) {
                 _status.value = MovieApiStatus.ERROR
                 _movies.value = listOf()
+                _errorMessage.value = "An error occurred: ${e.message}"
             }
         }
     }
@@ -40,9 +51,14 @@ class MovieViewModel(private val api: MovieApiService) : ViewModel() {
             try {
                 _searchResult.value = api.searchMovies(query).results
                 _status.value = MovieApiStatus.DONE
+            } catch (e: IOException) {
+                _status.value = MovieApiStatus.ERROR
+                _searchResult.value = listOf()
+                _errorMessage.value = "Network Failure: ${e.message}"
             } catch (e: Exception) {
                 _status.value = MovieApiStatus.ERROR
                 _searchResult.value = listOf()
+                _errorMessage.value = "An error occurred: ${e.message}"
             }
         }
     }

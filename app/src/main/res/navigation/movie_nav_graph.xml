@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.swancodes.showtime.ui.home.MovieListFragment"
+        android:name="com.swancodes.showtime.ui.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_movie_list" >
+        tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/to_movieDetailFragment"
             app:destination="@id/movieDetailFragment"
@@ -17,14 +17,34 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/to_searchFragment"
+            app:destination="@id/searchFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/movieDetailFragment"
-        android:name="com.swancodes.showtime.ui.detail.MovieDetailFragment"
-        android:label="fragment_movie_detail"
-        tools:layout="@layout/fragment_movie_detail">
+        android:name="com.swancodes.showtime.ui.detail.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail">
         <argument
             android:name="movie"
             app:argType="com.swancodes.showtime.data.model.Movie" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.swancodes.showtime.ui.search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/to_movieDetailFragment"
+            app:destination="@id/movieDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
 </navigation>

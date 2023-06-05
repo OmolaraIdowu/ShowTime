@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">ShowTime</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="back_button">Back Button</string>
     <string name="movie_image">Movie Image</string>
     <string name="show_time">ShowTime<font color="#FF6C00">•</font></string>
     <string name="language">Language: %s</string>
     <string name="release_date">Release Date: %s</string>
     <string name="no_result">No results found</string>
+    <string name="text_search">Text Search</string>
 </resources>

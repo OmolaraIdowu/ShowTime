@@ -8,21 +8,21 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.swancodes.showtime.R
-import com.swancodes.showtime.databinding.FragmentMovieDetailBinding
+import com.swancodes.showtime.databinding.FragmentDetailBinding
 import com.swancodes.showtime.util.Constants
 import com.swancodes.showtime.util.loadImage
 
-class MovieDetailFragment : Fragment() {
-    private var _binding: FragmentMovieDetailBinding? = null
+class DetailFragment : Fragment() {
+    private var _binding: FragmentDetailBinding? = null
     private val binding get() = _binding!!
-    private val args by navArgs<MovieDetailFragmentArgs>()
+    private val args by navArgs<DetailFragmentArgs>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        _binding = FragmentMovieDetailBinding.inflate(inflater)
+        _binding = FragmentDetailBinding.inflate(inflater)
         return binding.root
     }
 
